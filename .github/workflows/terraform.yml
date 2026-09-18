@@ -1,0 +1,162 @@
+name: terraform CI/CD
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'infrastructure/**'   # ajouter 
+      - '.github/workflows/terraform.yml'  
+  
+  workflow_dispatch:
+    inputs:
+      action:
+        description: Action terraform
+        required: true
+        type: choice
+        options:
+          - plan
+          - apply
+          - destroy
+      environment:
+        description: Environnement cible
+        required: true
+        type: choice 
+        options:
+          - dev
+          - staging
+          - prod
+
+env:
+  TF_VERSION: "1.10.0"
+  AWS_REGION: eu-west-3
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  terraform-plan-pr:
+    name: plan ${{ matrix.environment }}
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+
+    strategy:
+      matrix:
+        environment: [dev, staging, prod]
+      
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup terraform
+        uses: hashicorp/setup-terraform@v3
+        with: 
+          terraform_version: ${{ env.TF_VERSION }}
+        
+      - name: Configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          # aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          # aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: TEST - Vérifier AWS
+        run: |
+          echo "Vérification des credentials AWS..."
+          aws sts get-caller-identity
+      
+      - name: terraform init
+        working-directory: infrastructure/environments/${{ matrix.environment }}
+        run: terraform init
+
+      - name: terraform validate
+        working-directory: infrastructure/environments/${{ matrix.environment }}
+        run: terraform validate
+      
+      - name: terraform plan
+        working-directory: infrastructure/environments/${{ matrix.environment }}
+        run: |
+          terraform plan \
+            -var="db_password=${{ secrets.DB_PASSWORD }}" \
+            -var="secret_key=${{ secrets.DJANGO_SECRET_KEY }}" \
+            -no-color
+        continue-on-error: true
+
+  terraform_apply:
+    name: Apply -> ${{ github.event.inputs.environment }}
+    runs-on: ubuntu-latest
+    if: github.event.inputs.action == 'apply'
+
+    environment:
+      name: ${{ github.event.inputs.environment }}
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup terraform
+        uses: hashicorp/setup-terraform@v3
+        with: 
+          terraform_version: ${{ env.TF_VERSION }}
+        
+      - name: Configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          # aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          # aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+      
+      - name: terraform init
+        working-directory: infrastructure/environments/${{ github.event.inputs.environment }}
+        run: terraform init
+
+      - name: terraform validate
+        working-directory: infrastructure/environments/${{ github.event.inputs.environment }}
+        run: terraform validate
+      
+      - name: terraform apply
+        working-directory: infrastructure/environments/${{ github.event.inputs.environment }}
+        run: |
+          terraform apply -auto-approve \
+            -var="db_password=${{ secrets.DB_PASSWORD }}" \
+            -var="secret_key=${{ secrets.DJANGO_SECRET_KEY }}" \
+            -no-color
+            
+  terraform_destroy:
+    name: destroy ${{ github.event.inputs.environment }}
+    runs-on: ubuntu-latest
+    if: github.event.inputs.action == 'destroy'
+
+    environment:
+      name: ${{ github.event.inputs.environment }}
+    
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup terraform
+        uses: hashicorp/setup-terraform@v3
+        with: 
+          terraform_version: ${{ env.TF_VERSION }}
+        
+      - name: Configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          # aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          # aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+      
+      - name: terraform init
+        working-directory: infrastructure/environments/${{ github.event.inputs.environment }}
+        run: terraform init
+
+      - name: terraform destroy
+        working-directory: infrastructure/environments/${{ github.event.inputs.environment }}
+        run: |
+          terraform destroy -auto-approve \
+            -var="db_password=${{ secrets.DB_PASSWORD }}" \
+            -var="secret_key=${{ secrets.DJANGO_SECRET_KEY }}" \
+            -no-color
+
