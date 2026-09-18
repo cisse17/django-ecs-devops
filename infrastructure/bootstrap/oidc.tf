@@ -35,7 +35,10 @@ resource "aws_iam_role" "github_actions" {
         Condition = {
           StringLike = {
             # SEULEMENT mon repo GitHub peut utiliser ce rôle
-            "token.actions.githubusercontent.com:sub" = "repo:cisse17/django-ecs-devops:*"
+            "token.actions.githubusercontent.com:sub" = [
+            # Nouveau format immutable subject (GitHub depuis juillet 2026)
+            "repo:cisse17@119404406/django-ecs-devops@1374481008:*" 
+            ]
             
           }
           StringEquals = {
