@@ -35,7 +35,8 @@ resource "aws_iam_role" "github_actions" {
         Condition = {
           StringLike = {
             # SEULEMENT mon repo GitHub peut utiliser ce rôle
-            "token.actions.githubusercontent.com:sub" = "repo:cisse17/terraform-aws-infrastructure:*"
+            "token.actions.githubusercontent.com:sub" = "repo:cisse17/django-ecs-devops:*"
+            
           }
           StringEquals = {
             "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
