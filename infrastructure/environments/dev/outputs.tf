@@ -41,6 +41,10 @@ output "public_subnet_ids" {
   value       = module.vpc.public_subnet_ids
   description = "IDs des sous-réseaux publics créés"
 }
+output "private_subnet_ids" {
+  value       = module.vpc.private_subnet_ids
+  description = "IDs des sous-réseaux publics créés"
+}
 
 
 output "ecr_repository_url" {
@@ -55,4 +59,8 @@ output "ecs_cluster_name" {
 
 output "ecs_service_name" {
   value = module.ecs.service_name
+}
+
+output "ecs_sg_id" {
+  value = module.security.ecs_sg_id   
 }

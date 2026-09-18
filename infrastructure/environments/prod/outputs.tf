@@ -20,6 +20,11 @@ output "public_subnet_ids" {
 }
 
 
+output "private_subnet_ids" {
+  value       = module.vpc.private_subnet_ids
+  description = "IDs des sous-réseaux publics créés"
+}
+ 
 output "ecr_repository_url" {
   value       = module.ecr.repository_url
   description = "URL ECR pour push les images Docker"
@@ -32,4 +37,8 @@ output "ecs_cluster_name" {
 
 output "ecs_service_name" {
   value = module.ecs.service_name
+}
+
+output "ecs_sg_id" {
+  value = module.security.ecs_sg_id   
 }
