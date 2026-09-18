@@ -1,0 +1,9 @@
+[INFO] 2026-09-18 10:25:04,102 performance: [REQUEST TIME] GET /favicon.ico from 172.20.0.1 -> 7.53 ms
+[INFO] 2026-09-18 10:25:05,679 performance: [REQUEST TIME] GET /home/ from 172.20.0.1 -> 281.02 ms
+[INFO] 2026-09-18 10:25:08,231 performance: [REQUEST TIME] POST /accounts/deconnexion/ from 172.20.0.1 -> 19.24 ms
+[INFO] 2026-09-18 10:25:08,300 performance: [REQUEST TIME] GET /accounts/connexion/ from 172.20.0.1 -> 53.67 ms
+[INFO] 2026-09-18 10:25:14,897 performance: [REQUEST TIME] POST /accounts/connexion/ from 172.20.0.1 -> 231.04 ms
+[INFO] 2026-09-18 10:25:14,929 performance: [REQUEST TIME] GET /home/ from 172.20.0.1 -> 20.87 ms
+[INFO] 2026-09-18 10:25:21,602 performance: [REQUEST TIME] GET /home/create/ from 172.20.0.1 -> 61.63 ms
+[INFO] 2026-09-18 10:25:23,464 performance: [REQUEST TIME] GET /home/ from 172.20.0.1 -> 32.6 ms
+[INFO] 2026-09-18 14:40:05,798 performance: [REQUEST TIME] GET /home/ from 172.20.0.1 -> 321.91 ms

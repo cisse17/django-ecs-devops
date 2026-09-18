@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    <p>Êtes-vous sûr de vouloir supprimer "{{ note.title }}" ?</p>
+    <button type="submit" class="btn-danger">Oui, supprimer</button>
+    <!-- <a href="{% url 'delete' note.pk }" >Supprimer </a> -->
+    <!-- <a href="{ url 'voir-detail' note.pk %}">Annuler</a> -->
+    <a href="{% url 'detail' note.pk %}">Annuler</a>
+</form>
+
+{% endblock %}

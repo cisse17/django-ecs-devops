@@ -1,0 +1,22 @@
+[INFO] 2026-09-18 10:24:58,742 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-18 10:24:58,742 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2026-09-18 10:25:04,106 django.request: Not Found: /favicon.ico
+[WARNING] 2026-09-18 10:25:04,106 django.request: Not Found: /favicon.ico
+[WARNING] 2026-09-18 10:25:04,111 django.server: "GET /favicon.ico HTTP/1.1" 404 179
+[WARNING] 2026-09-18 10:25:04,111 django.server: "GET /favicon.ico HTTP/1.1" 404 179
+[INFO] 2026-09-18 10:25:05,681 django.server: "GET /home/ HTTP/1.1" 200 2108
+[INFO] 2026-09-18 10:25:05,681 django.server: "GET /home/ HTTP/1.1" 200 2108
+[INFO] 2026-09-18 10:25:08,234 django.server: "POST /accounts/deconnexion/ HTTP/1.1" 302 0
+[INFO] 2026-09-18 10:25:08,234 django.server: "POST /accounts/deconnexion/ HTTP/1.1" 302 0
+[INFO] 2026-09-18 10:25:08,302 django.server: "GET /accounts/connexion/ HTTP/1.1" 200 1491
+[INFO] 2026-09-18 10:25:08,302 django.server: "GET /accounts/connexion/ HTTP/1.1" 200 1491
+[INFO] 2026-09-18 10:25:14,902 django.server: "POST /accounts/connexion/ HTTP/1.1" 302 0
+[INFO] 2026-09-18 10:25:14,902 django.server: "POST /accounts/connexion/ HTTP/1.1" 302 0
+[INFO] 2026-09-18 10:25:14,931 django.server: "GET /home/ HTTP/1.1" 200 2247
+[INFO] 2026-09-18 10:25:14,931 django.server: "GET /home/ HTTP/1.1" 200 2247
+[INFO] 2026-09-18 10:25:21,604 django.server: "GET /home/create/ HTTP/1.1" 200 1894
+[INFO] 2026-09-18 10:25:21,604 django.server: "GET /home/create/ HTTP/1.1" 200 1894
+[INFO] 2026-09-18 10:25:23,467 django.server: "GET /home/ HTTP/1.1" 200 2108
+[INFO] 2026-09-18 10:25:23,467 django.server: "GET /home/ HTTP/1.1" 200 2108
+[INFO] 2026-09-18 14:40:05,815 django.server: "GET /home/ HTTP/1.1" 200 2108
+[INFO] 2026-09-18 14:40:05,815 django.server: "GET /home/ HTTP/1.1" 200 2108
