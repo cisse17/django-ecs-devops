@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppNote</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        
+        <a href="{% url 'home' %}"> <span class="brand">AppNote</span></a>
+        <nav>
+            <ul>
+                {% if request.user.is_authenticated %}
+                    <li class="greeting">Bonjour <b>{{ request.user.username }}</b></li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'create' %}">Ajouter une note</a></li>
+                    <li>
+                        <form method="post" action="{% url 'deconnexion' %}" style="display:inline;">
+                            {% csrf_token %}
+                            <input type="submit" value="Déconnexion">
+                        </form>
+                    </li>
+                    <li class="stats">{{ nb_users }} utilisateurs</li>
+                    <li class="stats">Vous avez <strong>{{ nb_notes }}</strong> 📝 notes </li>
+                {% else %}
+                    <li><a href="{% url 'connexion' %}">Connexion</a></li>
+                    <li><a href="{% url 'inscription' %}">Inscription</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <hr/>
+
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <div class="message">{{ message }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% block content %}
+    {% endblock %}
+
+</div>
+</body>
+</html>

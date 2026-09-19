@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Liste des notes</h1>
+
+<form method="get">
+    <input type="search" name="q" value="{{ query }}" placeholder="Rechercher une note...">
+    <input type="submit" value="Filtrer">
+</form>
+
+{% if notes %}
+    {% for note in notes %}
+        <div class="note-card">
+            <h2><a href="{% url 'detail' note.id %}">{{ note.title }}</a></h2>
+            <p>{{ note.content|truncatewords:15 }}</p>
+            <a class="voir-plus" href="{% url 'detail' note.id %}">Voir plus →</a>
+        </div>
+    {% endfor %}
+{% else %}
+    <div class="empty-state">
+        <p>Vous n'avez aucune note actuellement. <a href="{% url 'create' %}">Créez votre première note !</a></p>
+    </div>
+{% endif %}
+
+{% if notes and page_obj.paginator.num_pages > 1 %}
+    <div class="pagination">
+        {% if page_obj.has_previous %}
+            <a href="?q={{ query }}&page={{ page_obj.previous_page_number }}">← Précédent</a>
+        {% endif %}
+        <span>Page {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+        {% if page_obj.has_next %}
+            <a href="?q={{ query }}&page={{ page_obj.next_page_number }}">Suivant →</a>
+        {% endif %}
+    </div>
+{% endif %}
+
+{% endblock %}

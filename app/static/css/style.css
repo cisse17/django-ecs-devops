@@ -1,0 +1,357 @@
+/* ===========================================================
+   AppNote — style.css
+   Design simple, sobre, pro. Police système, palette neutre.
+   =========================================================== */
+
+   :root {
+    --bg: #f7f7f8;
+    --surface: #ffffff;
+    --border: #e2e2e5;
+    --text: #1f2328;
+    --text-muted: #6a6f76;
+    --accent: #2f5d50;       /* vert ardoise, sobre */
+    --accent-hover: #24473d;
+    --danger: #b3261e;
+    --danger-hover: #8f1e18;
+    --radius: 6px;
+    --shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 Helvetica, Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+}
+
+header .brand {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--text);
+    letter-spacing: -0.02em;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+header a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.15s ease;
+}
+
+header a:hover {
+    color: var(--accent);
+}
+
+header .greeting {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+header .greeting b {
+    color: var(--text);
+}
+
+header .stats {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 0 0 24px;
+}
+
+/* ---------- Titres ---------- */
+
+h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 20px;
+    letter-spacing: -0.01em;
+}
+
+h2 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 4px;
+}
+
+h2 a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+h2 a:hover {
+    color: var(--accent);
+}
+
+h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+
+/* ---------- Messages flash ---------- */
+
+.messages {
+    margin-bottom: 20px;
+}
+
+.message {
+    padding: 10px 14px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    margin-bottom: 8px;
+    background-color: #eef6f0;
+    color: #1f5138;
+    border: 1px solid #cfe8d8;
+}
+
+/* ---------- Formulaires ---------- */
+
+form p {
+    margin-bottom: 14px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+textarea,
+select {
+    width: 100%;
+    padding: 9px 11px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--surface);
+    color: var(--text);
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.15s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input[type="submit"],
+button {
+    background-color: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 9px 18px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.15s ease;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: var(--accent-hover);
+}
+
+/* bouton "déconnexion" en gris discret dans le header */
+header form input[type="submit"] {
+    background: none;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+header form input[type="submit"]:hover {
+    background-color: var(--border);
+    color: var(--text);
+}
+
+/* bouton danger (suppression) */
+button[style*="color: red"],
+.btn-danger {
+    background-color: var(--danger) !important;
+    color: #fff !important;
+}
+
+button[style*="color: red"]:hover,
+.btn-danger:hover {
+    background-color: var(--danger-hover) !important;
+}
+
+/* recherche */
+form[method="get"] {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+form[method="get"] input[type="search"] {
+    max-width: 280px;
+}
+
+/* ---------- Liste de notes (cards) ---------- */
+
+.note-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    box-shadow: var(--shadow);
+}
+
+.note-card p {
+    color: var(--text-muted);
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+
+.note-card a.voir-plus {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.note-card a.voir-plus:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Détail d'une note ---------- */
+
+.detail-meta {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin: 4px 0;
+}
+
+.detail-actions {
+    display: flex;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.detail-actions a {
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--accent);
+}
+
+.detail-actions a.delete-link {
+    color: var(--danger);
+}
+
+.detail-actions a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Pagination ---------- */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+    font-size: 14px;
+}
+
+.pagination a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.pagination a:hover {
+    text-decoration: underline;
+}
+
+.pagination span {
+    color: var(--text-muted);
+}
+
+/* ---------- État vide ---------- */
+
+.empty-state {
+    color: var(--text-muted);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.empty-state a {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+/* ---------- Retour ---------- */
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    color: var(--accent);
+}

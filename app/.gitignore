@@ -1,0 +1,16 @@
+# Secrets — JAMAIS sur GitHub
+.env
+.env.*
+*.env
+
+# Django
+*.pyc
+__pycache__/
+db.sqlite3
+staticfiles/
+mediafiles/
+
+# # Terraform
+# **/.terraform/
+# *.tfstate
+# *.tfstate.backup

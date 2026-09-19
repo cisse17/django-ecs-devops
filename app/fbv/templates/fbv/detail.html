@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<a class="back-link" href="{% url 'home' %}">← Retour</a>
+<h1>{{ detail.title }}</h1>
+
+<p>{{ detail.content }}</p>
+<p class="detail-meta">Créée le {{ detail.created_at }}</p>
+<p class="detail-meta">Modifiée le {{ detail.updated_at }}</p>
+
+<div class="detail-actions">
+    <a href="{% url 'update' pk=detail.pk %}">Modifier</a>
+    <a class="delete-link" href="{% url 'delete' pk=detail.pk %}">Supprimer</a>
+</div>
+
+{% endblock %}

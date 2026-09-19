@@ -1,0 +1,15 @@
+<h2>Bonjour {{ username }} 👋</h2>
+
+<p>Aujourd’hui, vous avez créé <strong>{{ nombre_notes }}</strong> note(s).</p>
+
+{% if notes %}
+    <ul>
+        {% for note in notes %}
+            <li>
+                <strong>{{ note.title }}</strong> — créée à {{ note.created_at|date:"H:i" }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Vous n’avez créé aucune note aujourd’hui.</p>
+{% endif %}

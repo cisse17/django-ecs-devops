@@ -1,0 +1,15 @@
+<h2>Résumé de la semaine {{ debut }} → {{ fin }}</h2>
+
+<p>Vous avez créé <strong>{{ nombre_notes }}</strong> note(s) cette semaine.</p>
+
+{% if notes %}
+    <ul>
+        {% for note in notes %}
+            <li>
+                <strong>{{ note.title }}</strong> — créée le {{ note.created_at|date:"d/m H:i" }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Aucune note créée cette semaine.</p>
+{% endif %}
