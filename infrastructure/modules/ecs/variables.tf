@@ -9,9 +9,8 @@ variable "aws_region" {
 variable "ecr_image_url" { type = string }
 
 variable "image_tag" { 
-     description = "Image tag dokcer" 
+     description = "Git SHA / Docker image tag to deploy" 
      type = string 
-     default="latest"
      }
 
 # Réseau

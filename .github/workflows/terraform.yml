@@ -58,7 +58,7 @@ jobs:
           TOKEN=$(curl -s -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
             "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=sts.amazonaws.com" | jq -r '.value')
           echo "$TOKEN" | cut -d. -f2 | base64 -d 2>/dev/null | jq .sub
-          
+
       - name: Configure aws credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -86,8 +86,8 @@ jobs:
           terraform plan \
             -var="db_password=${{ secrets.DB_PASSWORD }}" \
             -var="secret_key=${{ secrets.DJANGO_SECRET_KEY }}" \
+            -var="image_tag=bootstrap" \
             -no-color
-        continue-on-error: true
 
   terraform_apply:
     name: Apply -> ${{ github.event.inputs.environment }}
@@ -128,6 +128,7 @@ jobs:
           terraform apply -auto-approve \
             -var="db_password=${{ secrets.DB_PASSWORD }}" \
             -var="secret_key=${{ secrets.DJANGO_SECRET_KEY }}" \
+            -var="image_tag=bootstrap" \
             -no-color
             
   terraform_destroy:
@@ -165,5 +166,6 @@ jobs:
           terraform destroy -auto-approve \
             -var="db_password=${{ secrets.DB_PASSWORD }}" \
             -var="secret_key=${{ secrets.DJANGO_SECRET_KEY }}" \
+            -var="image_tag=bootstrap" \
             -no-color
 

@@ -2,7 +2,7 @@
 # ECR — Registry pour stocker les images Docker
 
 resource "aws_ecr_repository" "app" {
-  name                 = "ecr-${var.project_name}-${var.env}"
+  name                 = "ecr-${var.project_name}"
   image_tag_mutability = "IMMUTABLE"
 
   # Scan automatique des vulnérabilités
@@ -11,8 +11,7 @@ resource "aws_ecr_repository" "app" {
   }
 
   tags = {
-    Name = "ecr-${var.project_name}-${var.env}"
-    Env  = var.env
+    Name = "ecr-${var.project_name}"
   }
 }
 

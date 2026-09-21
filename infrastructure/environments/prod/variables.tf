@@ -43,4 +43,7 @@ variable "allowed_hosts" {
   default = "*"
 }
 
-
+variable "image_tag" {
+  description = "Git SHA / Docker image tag à déployer"
+  type        = string
+}

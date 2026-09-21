@@ -41,11 +41,15 @@ module "rds" {
   env               = var.env
 }
 
-module "ecr" {
-  source       = "../../modules/ecr"
-  project_name = var.project_name
-  env          = var.env
+# module "ecr" {
+#   source       = "../../modules/ecr"
+#   project_name = var.project_name
+#   env          = var.env
+# }
+data "aws_ecr_repository" "app" {
+  name = "ecr-${var.project_name}"
 }
+
 
 # Ajouter le module ECS
 module "ecs" {
@@ -56,7 +60,9 @@ module "ecs" {
   aws_region        = var.aws_region
 
   # Image Docker depuis ECR
-  ecr_image_url     = module.ecr.repository_url
+  # ecr_image_url     = module.ecr.repository_url
+  ecr_image_url = data.aws_ecr_repository.app.repository_url
+  image_tag = var.image_tag
 
   # Réseau
   vpc_id            = module.vpc.vpc_id
