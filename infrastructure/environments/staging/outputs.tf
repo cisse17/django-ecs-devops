@@ -26,8 +26,8 @@ output "private_subnet_ids" {
 
 
 output "ecr_repository_url" {
-  value       = module.ecr.repository_url
-  description = "URL ECR pour push les images Docker"
+  value       = data.aws_ecr_repository.app.repository_url
+  description = "URL du repository ECR partagé"
 }
 
 output "ecs_cluster_name" {
