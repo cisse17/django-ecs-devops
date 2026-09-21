@@ -86,7 +86,7 @@ jobs:
           terraform plan \
             -var="db_password=${{ secrets.DB_PASSWORD }}" \
             -var="secret_key=${{ secrets.DJANGO_SECRET_KEY }}" \
-            -var="image_tag=bootstrap" \
+            -var="image_tag=bootstrap-v2" \
             -no-color
 
   terraform_apply:
@@ -128,7 +128,7 @@ jobs:
           terraform apply -auto-approve \
             -var="db_password=${{ secrets.DB_PASSWORD }}" \
             -var="secret_key=${{ secrets.DJANGO_SECRET_KEY }}" \
-            -var="image_tag=bootstrap" \
+            -var="image_tag=bootstrap-v2" \
             -no-color
             
   terraform_destroy:
@@ -166,6 +166,6 @@ jobs:
           terraform destroy -auto-approve \
             -var="db_password=${{ secrets.DB_PASSWORD }}" \
             -var="secret_key=${{ secrets.DJANGO_SECRET_KEY }}" \
-            -var="image_tag=bootstrap" \
+            -var="image_tag=bootstrap-v2" \
             -no-color
 
