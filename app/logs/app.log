@@ -20,3 +20,123 @@
 [INFO] 2026-09-18 10:25:23,467 django.server: "GET /home/ HTTP/1.1" 200 2108
 [INFO] 2026-09-18 14:40:05,815 django.server: "GET /home/ HTTP/1.1" 200 2108
 [INFO] 2026-09-18 14:40:05,815 django.server: "GET /home/ HTTP/1.1" 200 2108
+[INFO] 2026-09-22 18:17:14,297 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 18:17:14,297 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 18:18:49,224 django.server: "GET /home/ HTTP/1.1" 200 2108
+[INFO] 2026-09-22 18:18:49,224 django.server: "GET /home/ HTTP/1.1" 200 2108
+[INFO] 2026-09-22 18:19:10,056 django.server: "GET /home/ HTTP/1.1" 200 2108
+[INFO] 2026-09-22 18:19:10,056 django.server: "GET /home/ HTTP/1.1" 200 2108
+[INFO] 2026-09-22 18:19:11,253 django.server: "GET /home/create/ HTTP/1.1" 200 1894
+[INFO] 2026-09-22 18:19:11,253 django.server: "GET /home/create/ HTTP/1.1" 200 1894
+[INFO] 2026-09-22 18:19:17,130 django.server: "POST /accounts/deconnexion/ HTTP/1.1" 302 0
+[INFO] 2026-09-22 18:19:17,130 django.server: "POST /accounts/deconnexion/ HTTP/1.1" 302 0
+[INFO] 2026-09-22 18:19:17,202 django.server: "GET /accounts/connexion/ HTTP/1.1" 200 1491
+[INFO] 2026-09-22 18:19:17,202 django.server: "GET /accounts/connexion/ HTTP/1.1" 200 1491
+[INFO] 2026-09-22 18:19:19,270 django.server: "POST /accounts/connexion/ HTTP/1.1" 302 0
+[INFO] 2026-09-22 18:19:19,270 django.server: "POST /accounts/connexion/ HTTP/1.1" 302 0
+[INFO] 2026-09-22 18:19:19,318 django.server: "GET /home/ HTTP/1.1" 200 2247
+[INFO] 2026-09-22 18:19:19,318 django.server: "GET /home/ HTTP/1.1" 200 2247
+[INFO] 2026-09-22 19:01:07,283 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:01:07,283 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:01:10,410 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:01:10,410 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:01:17,192 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:01:17,192 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:01:18,409 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:01:18,409 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:01:21,950 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:01:21,950 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:01:23,078 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:01:23,078 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:01:27,624 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:01:27,624 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:01:28,821 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:01:28,821 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:01:31,244 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:01:31,244 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:01:32,394 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:01:32,394 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:01:34,800 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:01:34,800 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:01:36,029 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:01:36,029 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:01:44,952 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:01:44,952 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:01:46,143 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:01:46,143 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:01:51,803 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:01:51,803 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:01:52,960 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:01:52,960 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:01:59,732 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:01:59,732 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:02:00,962 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:02:00,962 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:02:04,470 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:02:04,470 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:02:05,578 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:02:05,578 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:02:15,659 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:02:15,659 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:02:16,879 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:02:16,879 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:02:19,298 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:02:19,298 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:02:20,432 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:02:20,432 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:02:26,110 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:02:26,110 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:02:27,270 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:02:27,270 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:02:31,873 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:02:31,873 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:02:33,023 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:02:33,023 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:02:35,391 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:02:35,391 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:02:36,534 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:02:36,534 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:02:38,905 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:02:38,905 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:02:40,070 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:02:40,070 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:02:50,045 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:02:50,045 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:02:51,432 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:02:51,432 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:03:16,543 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:03:16,543 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:03:17,766 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:03:17,766 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:03:21,332 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:03:21,332 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:03:22,466 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:03:22,466 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:03:25,919 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:03:25,919 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:03:27,211 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:03:27,211 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:03:37,228 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:03:37,228 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:03:38,577 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:03:38,577 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:03:45,322 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:03:45,322 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:03:46,512 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:03:46,512 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:03:52,212 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:03:52,212 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:03:53,475 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:03:53,475 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:05:26,955 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:05:26,955 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:05:28,216 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:05:28,216 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:05:31,812 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:05:31,812 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:05:32,987 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:05:32,987 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:15:31,833 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:15:31,833 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:15:34,701 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:15:34,701 django.utils.autoreload: Watching for file changes with StatReloader
