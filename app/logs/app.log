@@ -136,3 +136,7 @@
 [INFO] 2026-09-22 19:05:31,812 django.utils.autoreload: /app/crud/urls.py changed, reloading.
 [INFO] 2026-09-22 19:05:32,987 django.utils.autoreload: Watching for file changes with StatReloader
 [INFO] 2026-09-22 19:05:32,987 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:15:31,833 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:15:31,833 django.utils.autoreload: /app/crud/urls.py changed, reloading.
+[INFO] 2026-09-22 19:15:34,701 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-09-22 19:15:34,701 django.utils.autoreload: Watching for file changes with StatReloader

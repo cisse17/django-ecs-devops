@@ -11,7 +11,7 @@ def health_check(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('health/', health_check, name="health")
+    path('health/', health_check, name="health"),
     # redirect racine vers home
     path('', RedirectView.as_view(url='/home/', permanent=False)),
 
