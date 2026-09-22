@@ -7,3 +7,10 @@
 [INFO] 2026-09-18 10:25:21,602 performance: [REQUEST TIME] GET /home/create/ from 172.20.0.1 -> 61.63 ms
 [INFO] 2026-09-18 10:25:23,464 performance: [REQUEST TIME] GET /home/ from 172.20.0.1 -> 32.6 ms
 [INFO] 2026-09-18 14:40:05,798 performance: [REQUEST TIME] GET /home/ from 172.20.0.1 -> 321.91 ms
+[INFO] 2026-09-22 18:18:49,220 performance: [REQUEST TIME] GET /home/ from 172.20.0.1 -> 358.45 ms
+[INFO] 2026-09-22 18:19:10,054 performance: [REQUEST TIME] GET /home/ from 172.20.0.1 -> 25.7 ms
+[INFO] 2026-09-22 18:19:11,251 performance: [REQUEST TIME] GET /home/create/ from 172.20.0.1 -> 76.23 ms
+[INFO] 2026-09-22 18:19:17,128 performance: [REQUEST TIME] POST /accounts/deconnexion/ from 172.20.0.1 -> 36.32 ms
+[INFO] 2026-09-22 18:19:17,200 performance: [REQUEST TIME] GET /accounts/connexion/ from 172.20.0.1 -> 47.15 ms
+[INFO] 2026-09-22 18:19:19,265 performance: [REQUEST TIME] POST /accounts/connexion/ from 172.20.0.1 -> 233.92 ms
+[INFO] 2026-09-22 18:19:19,316 performance: [REQUEST TIME] GET /home/ from 172.20.0.1 -> 36.12 ms

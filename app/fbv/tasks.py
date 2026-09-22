@@ -174,5 +174,5 @@ def supprimer_notes_anciennes(jours=30):
     count = notes_a_supprimer.count()
     notes_a_supprimer.delete()
     
-    logger.info(f"🗑️ {count} notes supprimées (plus de {jours} jours)")
-    return f"🗑️ {count} notes supprimées"
+    logger.info(f"{count} notes supprimées (plus de {jours} jours)")
+    return f"{count} notes supprimées"
