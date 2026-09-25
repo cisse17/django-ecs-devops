@@ -85,7 +85,10 @@ resource "aws_iam_role_policy" "github_actions" {
           "ecr:*",          # AJOUTER
           "ecs:*",          
           "logs:*",         
-          "secretsmanager:*",    
+          "secretsmanager:*",   
+  
+          "cloudwatch:*",    # AJOUTER
+          "sns:*",           # AJOUTER 
         ]
         Resource = "*"
       }
