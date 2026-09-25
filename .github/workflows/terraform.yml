@@ -131,7 +131,7 @@ jobs:
         run: |
           terraform apply -auto-approve \
             -var="db_password=${{ secrets.DB_PASSWORD }}" \
-            -var="secret_key=${{ secrets.DJANGO_SECRET_KEY }}" \           
+            -var="secret_key=${{ secrets.DJANGO_SECRET_KEY }}" \
             -var="alert_email=${{ secrets.ALERT_EMAIL }}" \
             -var="image_tag=bootstrap" \
             -no-color
