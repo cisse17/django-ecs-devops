@@ -40,3 +40,8 @@ output "ecs_service_name" {
 output "ecs_sg_id" {
   value = module.security.ecs_sg_id   
 }
+
+# Cloudwatch dashboard
+output "dashboard_url" {
+  value = module.cloudwatch.dashboard_url
+}

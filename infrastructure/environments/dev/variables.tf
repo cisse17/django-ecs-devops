@@ -33,6 +33,10 @@ variable "db_password" {
   sensitive = true
 }
 
+variable "allowed_hosts" {
+  type    = string
+  default = "*"
+}
 
 # ajouté pour ecs
 variable "secret_key" {
@@ -40,12 +44,14 @@ variable "secret_key" {
   sensitive = true
 }
 
-variable "allowed_hosts" {
-  type    = string
-  default = "*"
-}
-
 variable "image_tag" {
   description = "Git SHA / Docker image tag à déployer"
   type        = string
+}
+
+# ALerte pr cloudwatch
+variable "alert_email" {
+  type        = string
+  description = "Email pour les alertes CloudWatch"
+  default     = "bassiroucisse1711@gmail.com"
 }

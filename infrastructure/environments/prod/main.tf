@@ -85,7 +85,7 @@ module "ecs" {
   # Resources Fargate
   task_cpu          = "256"
   task_memory       = "512"
-  desired_count     = 1
+  desired_count     = 2
 }
 
 module "alb" {
@@ -95,4 +95,15 @@ module "alb" {
   security_group_id = module.security.alb_sg_id
   env               = var.env
   project_name      = var.project_name
+}
+
+# Appel: Ajouter le module cloudwatch
+module "cloudwatch" {
+  source = "../../modules/cloudwatch"
+
+  project_name    = var.project_name
+  env             = var.env
+  aws_region      = var.aws_region
+  alert_email     = var.alert_email
+  alb_arn_suffix  = module.alb.alb_arn_suffix
 }
