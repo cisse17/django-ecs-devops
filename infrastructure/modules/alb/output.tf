@@ -17,3 +17,9 @@ output "alb_target_group_arn" {
 output "alb_dns_name" {
   value = aws_alb.main.dns_name
 }
+
+# A AJOUTER - nécessaire pour CloudWatch
+output "alb_arn_suffix" {
+  value       = aws_alb.main.arn_suffix
+  description = "ARN suffix pour les métriques CloudWatch"
+}

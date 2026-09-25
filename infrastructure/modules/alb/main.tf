@@ -19,8 +19,8 @@ resource "aws_alb_target_group" "main" {
   protocol = "HTTP"
   port     = 8000        # 8000 pour Django/Gunicorn
   vpc_id   = var.vpc_id
-  target_type = "ip"     # ← IMPORTANT : "ip" pour ECS Fargate
-                         #   "instance" c'était pour EC2
+  target_type = "ip"     # Important : "ip" pour ECS Fargate
+                         #  "instance" c'était pour EC2
 
   health_check {
     enabled             = true

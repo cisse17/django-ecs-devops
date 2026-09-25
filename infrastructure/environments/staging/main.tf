@@ -97,3 +97,14 @@ module "alb" {
   env               = var.env
   project_name      = var.project_name
 }
+
+# Appel: Ajouter le module cloudwatch
+module "cloudwatch" {
+  source = "../../modules/cloudwatch"
+
+  project_name    = var.project_name
+  env             = var.env
+  aws_region      = var.aws_region
+  alert_email     = var.alert_email
+  alb_arn_suffix  = module.alb.alb_arn_suffix
+}
