@@ -173,7 +173,7 @@ resource "aws_cloudwatch_metric_alarm" "high_cpu" {
 }
 
 
-# ALARM : Trop d'erreurs 5xx
+# ALARM : Trop d'erreurs 500 (5xx)
 resource "aws_cloudwatch_metric_alarm" "high_5xx" {
   alarm_name          = "high-5xx-${var.project_name}-${var.env}"
   alarm_description   = "Trop d'erreurs 5xx sur l'ALB"
@@ -181,9 +181,9 @@ resource "aws_cloudwatch_metric_alarm" "high_5xx" {
   evaluation_periods  = 1
   metric_name         = "HTTPCode_Target_5XX_Count"
   namespace           = "AWS/ApplicationELB"
-  period              = 300
+  period              = 60 # test 1 minute au lieu de 5 minute (300)
   statistic           = "Sum"
-  threshold           = 5
+  threshold           = 1 # test 1 minute au lieu de 5 minute
   treat_missing_data  = "notBreaching"
 
   dimensions = {
