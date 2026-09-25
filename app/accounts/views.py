@@ -22,7 +22,7 @@ class RegisterView(CreateView):
         response = super().form_valid(form)  
         login(self.request, self.object) 
         # commenter temporairement pr tester aws vu que elasticache (redis) n'est pas encore configuré. à decommenter pr tester en local
-        # envoyer_email_bienvenu_html.delay(self.object.id)
+        envoyer_email_bienvenu_html.delay(self.object.id)
         messages.success(self.request, f'"Bienvenue {form.cleaned_data.get("username")} votre compte a été créé avec succès."')
         return response
     
