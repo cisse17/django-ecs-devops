@@ -177,7 +177,7 @@ resource "aws_cloudwatch_metric_alarm" "high_cpu" {
 resource "aws_cloudwatch_metric_alarm" "high_5xx" {
   alarm_name          = "high-5xx-${var.project_name}-${var.env}"
   alarm_description   = "Trop d'erreurs 5xx sur l'ALB"
-  comparison_operator = "GreaterThanThreshold"
+  comparison_operator = "GreaterThanOrEqualToThreshold"
   evaluation_periods  = 1
   metric_name         = "HTTPCode_Target_5XX_Count"
   namespace           = "AWS/ApplicationELB"
