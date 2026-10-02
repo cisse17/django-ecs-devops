@@ -249,9 +249,10 @@ Ce projet vous permet de pratiquer :
 - [x] GitHub Actions CI/CD Pipeline
 - [x] Remote State S3 + DynamoDB Locking
 - [x] Remote State S3 + use_lockfile (sans DynamoDB)
-- [ ] Architecture diagram
-- [ ] OIDC (suppression des clés AWS dans GitHub Secrets)
-- [ ] Application Django
+- [x] Architecture diagram
+- [x] OIDC (suppression des clés AWS dans GitHub Secrets)
+- [x] Application Django
+- [x] Monitoring (Cloudwatch)
 - [ ] Kubernetes (EKS)
 - [ ] Monitoring (Prometheus + Grafana)
 - [ ] FinOps
@@ -263,4 +264,4 @@ Ce projet vous permet de pratiquer :
 **Bassirou Mbacké CISSÉ**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/bassirou-mback%C3%A9-ciss%C3%A9-683529263/)
-[![YouTube](https://img.shields.io/badge/YouTube-Subscribe-red)](https://www.youtube.co
+[![YouTube](https://img.shields.io/badge/YouTube-Subscribe-red)](https://www.youtube.com/@bassiroutech)
